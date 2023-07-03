@@ -1,26 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Web Page</title>
+    <meta charset="UTF-8">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<title>Space Agency</title>
 </head>
 <body>
 	<header>
+        <?php
+        session_start();
+        if (!isset($_SESSION['nav_class'])) {
+
+            $_SESSION['nav_class'] = "close";
+        }
+
+        if (isset($_POST['btn-nav'])) {
+            if ($_SESSION['nav_class'] === "close") {
+
+                $_SESSION['nav_class'] = "navigation-bar";
+            } else {
+
+                $_SESSION['nav_class'] = "close";
+            }
+        }
+
+        if (isset($_POST['btn-close'])) {
+            if ($_SESSION['nav_class'] === "close") {
+
+                $_SESSION['nav_class'] = "navigation-bar";
+            } else {
+
+                $_SESSION['nav_class'] = "close";
+            }
+        }
+        ?>
 		<nav>
-            <button></button>
+            <form method="post">
+                <input type="submit" name="btn-nav" value="NAV">
+            </form>
+            <div class="<?= $_SESSION['nav_class']?>">
+                <form method="post">
+                    <input type="submit" name="btn-close" value="X">
+                </form>
+                <a>Home</a>
+                <a>About</a>
+                <a>Careers</a>
+                <a>Space and More</a>
+            </div>
         </nav>
         <h1>The Space Agency</h1>
 	</header>
 	<main>
-		<section>
+		<section class="first-mission">
             <h2>SCIENCE & EXPLORATION</h2>
             <h1>Euclid liftoff</h1>
             <p>01/07/2023 943 VIEWS 34 LIKES</p>
             <button>PLAY</button>
         </section>
 
-        <section>
-            <div>
-                <h2>ESA Vision</h2>
+        <section class="squares">
+            <div class="square-links">
+                <h2>Vision</h2>
                 <div>
                     <p>Agenda 2025</p>
                     <p>Accelerators</p>
@@ -28,29 +71,29 @@
                     <p>Revolution Space</p>
                 </div>
             </div>
-            <div>
-                <h2>ESA Vision</h2>
+            <div class="square-links">
+                <h2>Programmes</h2>
                 <div>
-                    <p>Agenda 2025</p>
-                    <p>Accelerators</p>
-                    <p>Advisory group report</p>
-                    <p>Revolution Space</p>
+                    <p>Space Science</p>
+                    <p>Human and Robotic Exploration</p>
+                    <p>Observing the Earth</p>
+                    <p>Connectivity</p>
                 </div>
             </div>
-            <div>
-                <h2>ESA Vision</h2>
+            <div class="square-links">
+                <h2>Pillars</h2>
                 <div>
-                    <p>Agenda 2025</p>
-                    <p>Accelerators</p>
-                    <p>Advisory group report</p>
-                    <p>Revolution Space</p>
+                    <p>Science & Exploration</p>
+                    <p>Space Safety</p>
+                    <p>Applications</p>
+                    <p>Enabling & Support</p>
                 </div>
             </div>
-            <div>
-                <h2>ESA Vision</h2>
+            <div class="square-links">
+                <h2>You</h2>
                 <div>
-                    <p>Agenda 2025</p>
-                    <p>Accelerators</p>
+                    <p>Careers at ESA</p>
+                    <p>Business with ESA</p>
                     <p>Advisory group report</p>
                     <p>Revolution Space</p>
                 </div>

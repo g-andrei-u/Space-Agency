@@ -1,0 +1,87 @@
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: "Arvo", serif;
+}
+
+header {
+  background-color: rgb(0, 5, 74);
+  color: white;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 5px solid rgb(0, 11, 170);
+}
+header nav input {
+  background-color: rgb(0, 5, 74);
+  color: white;
+  font-size: 25px;
+  border: 0px;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+header nav input:hover {
+  cursor: pointer;
+}
+header .navigation-bar {
+  background-color: rgb(0, 5, 74);
+  position: fixed;
+  top: 0;
+  width: 20%;
+  height: 100vh;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.4);
+}
+header .navigation-bar input {
+  background-color: rgb(0, 5, 74);
+  color: white;
+  font-size: 30px;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  border: 0px;
+}
+header .navigation-bar a {
+  margin: 12px 0;
+}
+header .close {
+  display: none;
+}
+
+.first-mission {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Img/Euclid_lift-off.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.squares {
+  background-color: black;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.squares .square-links {
+  background-color: rgb(0, 5, 74);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 25px;
+  border-top: 5px solid rgb(0, 11, 170);
+}
+
+/*# sourceMappingURL=style.css.map */
