@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link href="./style.css" rel="stylesheet" type="text/css">
+    <link href="./style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -51,12 +51,12 @@
                 <a>Space and More</a>
             </div>
         </nav>
-        <h1>The Space Agency</h1>
+        <h2>The Space Agency</h2>
 	</header>
 	<main>
 		<section class="first-mission">
             <h2>SCIENCE & EXPLORATION</h2>
-            <h1>Euclid liftoff</h1>
+            <h1>Euclid lifts off on quest to unravel the cosmic mystery of dark matter and dark energy</h1>
             <p>01/07/2023 943 VIEWS 34 LIKES</p>
             <button>PLAY</button>
         </section>
@@ -101,12 +101,14 @@
         </section>
 
         <section>
-            <div>
+            <div class="heading">
                 <h1>In the spotlight</h1>
-                <button>All</button>
-                <button>STORIES</button>
-                <button>VIDEOS</button>
-                <button>IMAGES</button>
+                <div>
+                    <button>All</button>
+                    <button>STORIES</button>
+                    <button>VIDEOS</button>
+                    <button>IMAGES</button>
+                </div>
             </div>
             <div>
                 <div>
@@ -116,9 +118,20 @@
                 </div>
             </div>
         </section>
+
+        <section class="second-mission">
+            <h2>SCIENCE & EXPLORATION</h2>
+            <h1>Euclid liftoff</h1>
+            <p>01/07/2023 943 VIEWS 34 LIKES</p>
+            <button>PLAY</button>
+        </section>
 	</main>
 	<footer>
-		<p>© 2023 My Company</p>
+        <h5>The Space Agency</h5>
+        <p>FAQ</p>
+		<p>Contacts</p>
+		<p>Terms and conditions</p>
+		<p>Privacy notice</p>
 	</footer>
 </body>
 </html>

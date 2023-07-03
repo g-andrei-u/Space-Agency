@@ -2,19 +2,25 @@ body {
   box-sizing: border-box;
   margin: 0px;
   font-family: "Arvo", serif;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
 }
 
 header {
+  box-sizing: border-box;
   background-color: rgb(0, 5, 74);
   color: white;
   position: fixed;
   z-index: 1;
   width: 100%;
-  height: 70px;
+  height: 65px;
   display: flex;
   align-items: center;
   flex-direction: row;
-  border-bottom: 5px solid rgb(0, 11, 170);
+  border-bottom: 5px solid rgb(0, 13, 195);
+}
+header h2 {
+  font-size: 25px;
 }
 header nav input {
   background-color: rgb(0, 5, 74);
@@ -56,7 +62,7 @@ header .close {
 .first-mission {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Img/Euclid_lift-off.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./Img/Euclid_lift-off.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -65,6 +71,72 @@ header .close {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.first-mission h2 {
+  background-color: red;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0 5px;
+}
+.first-mission h1 {
+  font-size: 40px;
+  padding: 0 25%;
+  line-height: 55px;
+}
+.first-mission p {
+  font-size: 15px;
+}
+.first-mission button {
+  background-color: white;
+  font-weight: 400;
+  width: 110px;
+  height: 40px;
+  padding: 5px 20px;
+  border: 0px;
+  border-radius: 4px;
+}
+.first-mission button:hover {
+  cursor: pointer;
+}
+
+.second-mission {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./Img/The_Sun_in_high_resolution_pillars.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.second-mission h2 {
+  background-color: red;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0 5px;
+}
+.second-mission h1 {
+  font-size: 40px;
+  padding: 0 25%;
+  line-height: 55px;
+}
+.second-mission p {
+  font-size: 15px;
+}
+.second-mission button {
+  background-color: white;
+  font-weight: 400;
+  width: 110px;
+  height: 40px;
+  padding: 5px 20px;
+  border: 0px;
+  border-radius: 4px;
+}
+.second-mission button:hover {
+  cursor: pointer;
 }
 
 .squares {
@@ -80,8 +152,31 @@ header .close {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 15px 25px;
-  border-top: 5px solid rgb(0, 11, 170);
+  padding: 15px 25px 30px 25px;
+  border-top: 5px solid rgb(0, 13, 195);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+.heading h1 {
+  font-size: 55px;
+}
+.heading button {
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid rgb(0, 5, 74);
+  padding: 10px 25px;
+  border-radius: 3px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 170px;
 }
 
 /*# sourceMappingURL=style.css.map */

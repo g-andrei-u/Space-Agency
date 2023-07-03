@@ -1,24 +1,73 @@
 $dark_blue: rgb(0, 5, 74);
-$normal_blue: rgb(0, 11, 170);
+$normal_blue: rgb(0, 13, 195);
 $font: 'Arvo', serif;
+
+@mixin button {
+    background-color: white;
+    font-weight: 400;
+    width: 110px;
+    height: 40px;
+    padding: 5px 20px;
+    border: 0px;
+    border-radius: 4px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin background_image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+        background-color: red;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 0 5px;
+    }
+
+    h1 {
+        font-size: 40px;
+        padding: 0 25%;
+        line-height: 55px
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
 
 body {
     box-sizing: border-box;
     margin: 0px;
     font-family: $font;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
 }
 
 header { 
+    box-sizing: border-box;
     background-color: $dark_blue;
     color: white;
     position: fixed;
     z-index: 1;
     width: 100%;
-    height: 70px;
+    height: 65px;
     display: flex;
     align-items: center;
     flex-direction: row;
     border-bottom: 5px solid $normal_blue;
+
+    h2 {
+        font-size: 25px;
+    }
 
     nav input {
         background-color: $dark_blue;
@@ -66,15 +115,23 @@ header {
 .first-mission {
     width: 100%;
     height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./Img/Euclid_lift-off.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(./Img/Euclid_lift-off.jpg);
+    @include background_image();
+
+    button {
+        @include button;
+    }
+}
+
+.second-mission {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(./Img/The_Sun_in_high_resolution_pillars.jpg);
+    @include background_image();
+
+    button {
+        @include button;
+    }
 }
 
 
@@ -91,7 +148,33 @@ header {
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 15px 25px;
+        padding: 15px 25px 30px 25px;
         border-top: 5px solid $normal_blue;
     }
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+
+    h1 {
+        font-size: 55px;
+    }
+
+    button {
+        background-color: rgba(255, 255, 255, 0);
+        border: 3px solid $dark_blue;
+        padding: 10px 25px;
+        border-radius: 3px;
+    }
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 170px;
 }
