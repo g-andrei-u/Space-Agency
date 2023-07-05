@@ -15,7 +15,7 @@
     <?php 
     include 'Array.php';
     ?>
-	<header id="here2">
+	<header id="header1">
         <?php
         session_start();
         if (!isset($_SESSION['nav_class'])) {
@@ -27,8 +27,6 @@
             if ($_SESSION['nav_class'] === "close") {
 
                 $_SESSION['nav_class'] = "navigation-bar";
-                header("Location: #here2");
-                exit();
             } else {
 
                 $_SESSION['nav_class'] = "close";
@@ -36,10 +34,7 @@
         }
 
         if (isset($_POST['btn-close'])) {
-            if ($_SESSION['nav_class'] === "close") {
-
-                $_SESSION['nav_class'] = "navigation-bar";
-            } else {
+            if ($_SESSION['nav_class'] === "navigation-bar") {
 
                 $_SESSION['nav_class'] = "close";
             }
@@ -115,26 +110,29 @@
                     <?php
                     $filteredStories = $stories;
 
-                    if (isset($_POST['all'])) {
-                        $filteredStories = $stories;
+                    function filtering() {
+                        global $filteredStories, $stories;
 
-                        header("Location: #here");
-                        exit();
-                    } elseif (isset($_POST['story'])) {
+                        if (isset($_POST['all'])) {
+                            $filteredStories = $stories;
+                        } elseif (isset($_POST['story'])) {
+                            $filteredStories = array_filter($stories, function ($story) {
+                                return $story['type'] === 'story';
+                            });
+                        } elseif (isset($_POST['video'])) {
+                            $filteredStories = array_filter($stories, function ($story) {
+                                return $story['type'] === 'video';
+                            });
+                        } elseif (isset($_POST['image'])) {
+                            $filteredStories = array_filter($stories, function ($story) {
+                                return $story['type'] === 'image';
+                            });
+                        }
+                    }
 
-                        $filteredStories = array_filter($stories, function ($story) {
-                            return $story['type'] === 'story';
-                        });
-                    } elseif (isset($_POST['video'])) {
-
-                        $filteredStories = array_filter($stories, function ($story) {
-                            return $story['type'] === 'video';
-                        });
-                    } elseif (isset($_POST['image'])) {
-
-                        $filteredStories = array_filter($stories, function ($story) {
-                            return $story['type'] === 'image';
-                        });
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SESSION['nav_class'] = "close") {
+                        filtering();
+                        echo '<script>window.location = "#here";</script>';
                     }
                     ?>
                     <form method="post" id="buttons">
