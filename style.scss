@@ -157,7 +157,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 50px;
+    padding: 20px 55px;
 
     h1 {
         font-size: 55px;
@@ -168,6 +168,49 @@ header {
         border: 3px solid $dark_blue;
         padding: 10px 25px;
         border-radius: 3px;
+    }
+}
+
+
+
+.stories {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px 55px 100px 55px;
+
+    .story {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 300px;
+        height: 440px;
+        box-shadow: 0 0 7px 0.5px rgb(169, 169, 169);
+    
+        img {
+            width: 300px;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 8px;
+        }
+    
+        button {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 0px;
+            padding: 5px 12px;
+            border-radius: 3px;
+            margin: 10px 0;
+    
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    
+        &:hover {
+            background-color: rgb(233, 233, 233);
+            transition: 300ms;
+        }
     }
 }
 
