@@ -42,7 +42,11 @@
         ?>
 		<nav>
             <form method="post">
-                <input type="submit" name="btn-nav" value="NAV">
+                <button type="submit" name="btn-nav" value="NAV">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </form>
             <div class="<?= $_SESSION['nav_class']?>">
                 <form method="post">
@@ -67,39 +71,39 @@
         <section class="squares">
             <div class="square-links">
                 <h2>Vision</h2>
-                <div>
-                    <p>Agenda 2025</p>
-                    <p>Accelerators</p>
-                    <p>Advisory group report</p>
-                    <p>Revolution Space</p>
-                </div>
+                <ul>
+                    <li><p>Agenda 2025</p></li>
+                    <li><p>Accelerators</p></li>
+                    <li><p>Advisory group report</p></li>
+                    <li><p>Revolution Space</p></li>
+                 </ul>
             </div>
             <div class="square-links">
                 <h2>Programmes</h2>
-                <div>
-                    <p>Space Science</p>
-                    <p>Human and Robotic Exploration</p>
-                    <p>Observing the Earth</p>
-                    <p>Connectivity</p>
-                </div>
+                <ul>
+                    <li><p>Space Science</p></li>
+                    <li><p>Human and Robotic Exploration</p></li>
+                    <li><p>Observing the Earth</p></li>
+                    <li><p>Connectivity</p></li>
+                </ul>
             </div>
             <div class="square-links">
                 <h2>Pillars</h2>
-                <div>
-                    <p>Science & Exploration</p>
-                    <p>Space Safety</p>
-                    <p>Applications</p>
-                    <p>Enabling & Support</p>
-                </div>
+                <ul>
+                    <li><p>Science & Exploration</p></li>
+                    <li><p>Space Safety</p></li>
+                    <li><p>Applications</p></li>
+                    <li><p>Enabling & Support</p></li>
+                </ul>
             </div>
             <div class="square-links">
                 <h2>You</h2>
-                <div>
-                    <p>Careers at ESA</p>
-                    <p>Business with ESA</p>
-                    <p>Advisory group report</p>
-                    <p>Revolution Space</p>
-                </div>
+                <ul>
+                    <li><p>Careers at ESA</p></li>
+                    <li><p>Business with ESA</p></li>
+                    <li><p>Advisory group report</p></li>
+                    <li><p>Revolution Space</p></li>
+                </ul>
             </div>
         </section>
 
@@ -152,7 +156,7 @@
                     <div>
                         <h3><?= $story["title"] ?></h3>
                         <p><?= $story["date"] ?></p>
-                        <button>READ</button>
+                        <button>VIEW</button>
                     </div>
                 </li>
                 <?php endforeach ?>
@@ -164,6 +168,26 @@
             <h1>The Sun in high resolution</h1>
             <p>01/07/2023 943 VIEWS 34 LIKES</p>
             <button>PLAY</button>
+        </section>
+
+        <section>
+            <div class="heading">
+                <h1>Recommeded</h1>
+            </div>
+            <ul class="stories">
+                <?php foreach ($recomended as $info): ?>
+                <li class="story">
+                    <div>
+                        <img src="<?= $info["src"] ?>" />
+                    </div>
+                    <div>
+                        <h3><?= $info["title"] ?></h3>
+                        <p><?= $info["details"] ?></p>
+                        <button>READ</button>
+                    </div>
+                </li>
+                <?php endforeach ?>
+            </ul>
         </section>
 	</main>
 	<footer>
