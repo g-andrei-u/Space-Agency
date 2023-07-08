@@ -19,7 +19,27 @@ $stories = [
     ['src' => './Img/spacesuit.png', 
     'type' => 'image',
     'title' => 'Winning spacesuit',
-    'date' => '03/07/2023']
+    'date' => '03/07/2023'],
+    
+    ['src' => './Img/Euclid_card_full.png', 
+    'type' => 'video',
+    'title' => 'euclid: exploring the dark universe',
+    'date' => '20/01/2023'],
+
+    ['src' => './Img/Earth_from_Space_Cyclone_Mocha.jpg', 
+    'type' => 'image',
+    'title' => 'Earth from Space: Cyclone Mocha',
+    'date' => '07/07/2023'],
+
+    ['src' => './Img/easyJet_plane_takes_off.jpg', 
+    'type' => 'story',
+    'title' => 'Europe-wide space-enabled aviation approaches take off',
+    'date' => '06/07/2023'],
+
+    ['src' => './Img/participants_of_the_helicopter.jpg', 
+    'type' => 'story',
+    'title' => 'Taking flight and making a splash',
+    'date' => '06/07/2023']
 ];
 
 $recomended = [
